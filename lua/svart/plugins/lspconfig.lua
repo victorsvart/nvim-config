@@ -56,6 +56,12 @@ return {
           capabilities = capabilities,
         })
       end,
+      ["json-lsp"] = function()
+        nvim_lsp["json-lsp"].setup({
+          on_attach = on_attach,
+          capabilities = capabilities,
+        })
+      end,
     })
   end,
 }
