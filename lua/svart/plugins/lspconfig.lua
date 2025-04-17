@@ -44,6 +44,12 @@ return {
           capabilities = capabilities,
         })
       end,
+      ["basedpyright"] = function()
+        nvim_lsp["basedpyright"].setup({
+          on_attach = on_attach,
+          capabilities = capabilities,
+        })
+      end,
       ["dockerls"] = function()
         nvim_lsp["dockerls"].setup({
           on_attach = on_attach,
