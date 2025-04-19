@@ -44,6 +44,30 @@ return {
           capabilities = capabilities,
         })
       end,
+      ["ts_ls"] = function()
+        nvim_lsp["ts_ls"].setup({
+          on_attach = on_attach,
+          capabilities = capabilities,
+        })
+      end,
+      ["eslint"] = function()
+        nvim_lsp["eslint"].setup({
+          on_attach = on_attach,
+          capabilities = capabilities,
+        })
+      end,
+      ["html"] = function()
+        nvim_lsp["html"].setup({
+          on_attach = on_attach,
+          capabilities = capabilities,
+        })
+      end,
+      ["svelte"] = function()
+        nvim_lsp["svelte"].setup({
+          on_attach = on_attach,
+          capabilities = capabilities,
+        })
+      end,
       ["basedpyright"] = function()
         nvim_lsp["basedpyright"].setup({
           on_attach = on_attach,
@@ -62,8 +86,8 @@ return {
           capabilities = capabilities,
         })
       end,
-      ["json-lsp"] = function()
-        nvim_lsp["json-lsp"].setup({
+      ["jsonls"] = function()
+        nvim_lsp["jsonls"].setup({
           on_attach = on_attach,
           capabilities = capabilities,
         })

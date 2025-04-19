@@ -40,6 +40,7 @@ return {
         "c",
         "go",
         "python",
+        "svelte",
       },
       incremental_selection = {
         enable = true,
