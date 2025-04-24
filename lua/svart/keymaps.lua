@@ -24,7 +24,7 @@ map("n", "gI", vim.lsp.buf.implementation)
 
 -- rename
 map("n", "<leader>ra", vim.lsp.buf.rename)
---
+
 -- Open diagnostics in the location list
 vim.keymap.set("n", "<leader>ds", vim.diagnostic.setloclist, { desc = "Diagnostics to loclist" })
 

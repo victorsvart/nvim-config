@@ -56,18 +56,6 @@ return {
           capabilities = capabilities,
         })
       end,
-      ["html"] = function()
-        nvim_lsp["html"].setup({
-          on_attach = on_attach,
-          capabilities = capabilities,
-        })
-      end,
-      ["svelte"] = function()
-        nvim_lsp["svelte"].setup({
-          on_attach = on_attach,
-          capabilities = capabilities,
-        })
-      end,
       ["basedpyright"] = function()
         nvim_lsp["basedpyright"].setup({
           on_attach = on_attach,
@@ -88,6 +76,12 @@ return {
       end,
       ["jsonls"] = function()
         nvim_lsp["jsonls"].setup({
+          on_attach = on_attach,
+          capabilities = capabilities,
+        })
+      end,
+      ["emmet_language_server"] = function()
+        nvim_lsp["emmet_language_server"].setup({
           on_attach = on_attach,
           capabilities = capabilities,
         })
