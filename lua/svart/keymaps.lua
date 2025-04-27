@@ -10,9 +10,6 @@ map("n", "<leader>w", "<CMD>update<CR>")
 -- Quit
 map("n", "<leader>q", "<CMD>q<CR>")
 
--- Exit insert mode
-map("i", "jk", "<ESC>")
-
 -- code actions
 map("n", "<leader>ca", vim.lsp.buf.code_action)
 
@@ -29,10 +26,11 @@ map("n", "<leader>ra", vim.lsp.buf.rename)
 vim.keymap.set("n", "<leader>ds", vim.diagnostic.setloclist, { desc = "Diagnostics to loclist" })
 
 -- telescope-file-browser
-vim.keymap.set("n", "<leader>e", ":Telescope file_browser<CR>")
-
--- open file_browser with the path of the current buffer
---vim.keymap.set("n", "<space>fb", ":Telescope file_browser path=%:p:h select_buffer=true<CR>")
+vim.keymap.set("n", "<leader>e", function()
+  require("telescope").extensions.file_browser.file_browser({
+    initial_mode = "normal",
+  })
+end, { desc = "Open file browser in normal mode" })
 
 -- New Windows
 map("n", "<leader>o", "<CMD>vsplit<CR>")
